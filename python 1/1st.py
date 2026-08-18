@@ -675,7 +675,33 @@ file.close()'''
 '''with open("abc.txt","r")as file:
     print(file.read())'''
 
-with open("abc.txt","a")as file:
+'''with open("abc.txt","a")as file:
     n=input("Enter your name")
     file.write(n+"\n")
-    file.close()
+    file.close()'''
+
+'''with open("abc.txt","+a")as file:
+    n=(input("Enter your name"))
+    file.write(n)
+    file.close()'''
+
+#42 search the word in txt file 
+
+'''search=input("Enter any word did you search.")
+with open("abc.txt","r")as file:
+    data=file.read()
+if search in data:
+    print("word are found")
+else:
+    print("Word are not found")'''
+
+
+#43 CSV.
+
+import csv
+with open("Student.csv","w",newline="") as file:
+    writer =csv.writer(file)
+    writer.writerow(["name","roll.no","PRJ No."])
+    writer.writerow(["Himanshu",22,343])
+    writer.writerow(["jhih",89,988])
+    writer.writerow(["jaiufd",29,909])
